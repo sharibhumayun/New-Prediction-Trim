@@ -39,9 +39,7 @@ def main():
     st.title('TRIM Prediction')
     
     
-    Mobily = st.text_input('Mobily')
-    STC = st.text_input('STC')
-    Zain = st.text_input('Zain')
+    Service Provider = st.selectbox('Mobily','STC', 'Zain')
     Communication = st.sidebar.slider('Communication',0,100,50)
     Proposition = st.sidebar.slider('Proposition',0,100,50)
     Sales_Experience = st.sidebar.slider('Sales Experience',0,100,50)
