@@ -17,7 +17,7 @@ from sklearn.linear_model import LinearRegression
 lr = LinearRegression()
 lr.fit(x_train,y_train)
 
-Input_values = [0,0,0,0,0,0,0,0,0,0]
+Input_values = [50,56,65,57,58,70,59,1,0,0]
 Input_values = np.asarray(Input_values)
 Input_values = Input_values.reshape(1,-1)
 y_pred1 = lr.predict(Input_values)
@@ -39,7 +39,8 @@ def main():
     st.title('TRIM Prediction')
     
     
-    Service Provider = st.selectbox('Mobily','STC', 'Zain')
+    Service Provider = st.selectbox('Service Provider', (Mobily','STC', 'Zain'))                            
+   
     Communication = st.sidebar.slider('Communication',0,100,50)
     Proposition = st.sidebar.slider('Proposition',0,100,50)
     Sales_Experience = st.sidebar.slider('Sales Experience',0,100,50)
